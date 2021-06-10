@@ -6,5 +6,8 @@
             "email": "ekuzin@outlook.com"
         }
     ],
+    "bin": [
+	    "bin/brain-games"
+    ],
     "require": {}
 }
