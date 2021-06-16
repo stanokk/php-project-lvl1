@@ -5,4 +5,6 @@
 
 ![workflow](https://github.com/stanokk/php-project-lvl1/actions/workflows/workflow.yml/badge.svg)
 
-<a href="https://asciinema.org/a/tGh8tvOI5DiktFcl92MmKAGcR" target="_blank"><img src="https://asciinema.org/a/tGh8tvOI5DiktFcl92MmKAGcR.svg" /></a>
+[![asciicast](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964.svg)](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964)
+
+[![asciicast](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L.svg)](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L)
