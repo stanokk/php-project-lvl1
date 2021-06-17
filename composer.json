@@ -2,7 +2,8 @@
     "name": "hexlet/code",
     "autoload": {
 	    "files":["src/Cli.php",
-	             "src/Even.php"]
+	             "src/Even.php",
+	             "src/Calc.php"]
     },
     "authors": [
         {
