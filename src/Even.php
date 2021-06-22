@@ -4,13 +4,16 @@
 
   use function cli\line;
   use function cli\prompt;
+  use function Brain\Games\Engine\playGame;
 
-function checkAnswer()
+function startEvenGame()
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+	$rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+	$congrats = "Congratulations, %s!";
+
+
+$round = function($name) 
+{
     for ($i = 0; $i <= 2; $i++) {
          $number = mt_rand(1, 100);
          line("Question: {$number}");
@@ -34,5 +37,6 @@ function checkAnswer()
                 line('Correct!');
         }
     }
-    line("Congratulations, %s!", $name);
+};
+    playGame($rule, $round, $congrats);
 }
