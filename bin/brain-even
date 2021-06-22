@@ -4,5 +4,5 @@ namespace Brain\Games\Even;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-checkAnswer();
+startEvenGame();
 
