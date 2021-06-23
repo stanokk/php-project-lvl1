@@ -5,7 +5,6 @@
   use function cli\line;
   use function cli\prompt;
 
-  
 function playGame($rule, $round, $congrats)
 {
     line('Welcome to the Brain Game!');
@@ -15,6 +14,3 @@ function playGame($rule, $round, $congrats)
     $round($name);
     line($congrats, $name);
 }
-
-
-
