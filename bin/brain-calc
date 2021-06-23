@@ -4,5 +4,5 @@ namespace Brain\Games\Calc;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-calcResult();
+startCalcGame();
 
