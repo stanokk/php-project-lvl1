@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+namespace Brain\Games\Progression;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+startProgressionGame();
+
+
