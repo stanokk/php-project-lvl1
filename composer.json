@@ -2,6 +2,7 @@
     "name": "hexlet/code",
     "autoload": {
 	    "files":["src/Engine.php",
+		     "src/Games/Cli.php",
 	             "src/Games/Even.php",
 	             "src/Games/Calc.php",
 		     "src/Games/Gcd.php",
