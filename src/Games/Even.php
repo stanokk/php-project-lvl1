@@ -32,7 +32,7 @@ function startEvenGame()
                         exit("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}\n");
                     break;
                     default:
-                        exit("/Let's try again, {$name}/\n");
+                        exit("Let's try again, {$name}!\n");
                 }
             } elseif ($answer === $correctAnswer) {
                 line('Correct!');
