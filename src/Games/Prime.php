@@ -28,10 +28,10 @@ function startPrimeGame()
             if ($answer !== $correctAnswer) {
                 switch ($answer) {
                     case 'yes':
-                        exit("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}\n");
+                        exit("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}!\n");
                               break;
                     case 'no':
-                        exit("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}\n");
+                        exit("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}!\n");
                               break;
                 }
             } elseif ($answer === $correctAnswer) {

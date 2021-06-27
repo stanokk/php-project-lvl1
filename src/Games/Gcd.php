@@ -35,7 +35,7 @@ function startGcdGame()
                 line('Correct!');
             } else {
                 exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again {$name}\n");
+Let's try again {$name}!\n");
             }
         }
     };
