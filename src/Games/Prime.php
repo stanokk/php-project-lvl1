@@ -21,7 +21,7 @@ function startPrimeGame()
             for ($j = 2; $j <= $number / 2; $j++) {
                 if ($number % $j === 0) {
                     $correctAnswer = 'no';
-                } else {
+                } elseif ($number % $j !== 0) {
                     $correctAnswer = 'yes';
                 }
             }
