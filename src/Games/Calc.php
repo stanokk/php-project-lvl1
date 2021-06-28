@@ -37,15 +37,15 @@ function startCalcGame()
                 switch ($randomOperator) {
                     case '+':
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again {$name}!\n");
+Let's try again, {$name}!\n");
                         break;
                     case '-':
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again {$name}!\n");
+Let's try again, {$name}!\n");
                         break;
                     case '*':
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again {$name}!\n");
+Let's try again, {$name}!\n");
                         break;
                 }
             }

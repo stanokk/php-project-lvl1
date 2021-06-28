@@ -32,7 +32,7 @@ function startProgressionGame()
                 line('Correct!');
             } else {
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$hiddenValue}'.
-Let's try again {$name}!\n");
+Let's try again, {$name}!\n");
             }
         }
     };
