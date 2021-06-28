@@ -6,22 +6,23 @@
   use function cli\prompt;
   use function Brain\Games\Engine\playGame;
 
-function startGcdGame()
+function getGcd(int $num1, int $num2): int
+{
+    while (true) {
+        if ($num1 === $num2) {
+            return $num2;
+        } if ($num1 > $num2) {
+            $num1 -= $num2;
+        } else {
+            $num2 -= $num1;
+        }
+    }
+}
+
+function startGcdGame(): void
 {
         $rule = 'Find the greatest common divisor of given numbers';
         $congrats = "Congratulations, %s!";
-    function getGcd(int $num1, int $num2)
-    {
-        while (true) {
-            if ($num1 === $num2) {
-                return $num2;
-            } if ($num1 > $num2) {
-                $num1 -= $num2;
-            } else {
-                $num2 -= $num1;
-            }
-        }
-    }
 
     $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
