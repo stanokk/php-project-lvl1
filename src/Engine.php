@@ -5,7 +5,7 @@
   use function cli\line;
   use function cli\prompt;
 
-function playGame($rule, $round, $congrats)
+function playGame(string $rule, callable $round, string $congrats): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
