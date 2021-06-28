@@ -19,9 +19,10 @@ function startPrimeGame()
             $answer = prompt('Your answer');
 
             for ($j = 2; $j < $number; $j++) {
-                if ($number % $j === 0) {
+                if ($number % $j == 0) {
                     $correctAnswer = 'no';
-                } elseif ($number % $j !== 0) {
+                    break;
+                } else {
                     $correctAnswer = 'yes';
                 }
             }
