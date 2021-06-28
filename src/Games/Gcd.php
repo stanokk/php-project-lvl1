@@ -10,7 +10,7 @@ function startGcdGame()
 {
         $rule = 'Find the greatest common divisor of given numbers';
         $congrats = "Congratulations, %s!";
-    function getGcd($num1, $num2)
+    function getGcd(int $num1, int $num2)
     {
         while (true) {
             if ($num1 === $num2) {
@@ -23,7 +23,7 @@ function startGcdGame()
         }
     }
 
-    $round = function ($name) {
+    $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
             $number_1 = mt_rand(1, 20);
             $number_2 = mt_rand(1, 20);

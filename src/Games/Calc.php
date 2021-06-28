@@ -6,12 +6,12 @@
   use function cli\prompt;
   use function Brain\Games\Engine\playGame;
 
-function startCalcGame()
+function startCalcGame(): void
 {
         $rule = 'What is the result of the expression?';
         $congrats = "Congratulations, %s!";
 
-    $round = function ($name) {
+    $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
             $correctAnswer = 0;
             $number_1 = mt_rand(1, 20);
@@ -33,20 +33,17 @@ function startCalcGame()
             }
             if ($answer === (string) $correctAnswer) {
                 line('Correct!');
-            } elseif ($answer !== $correctAnswer) {
+            } elseif ($answer !== (string) $correctAnswer) {
                 switch ($randomOperator) {
                     case '+':
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!\n");
-                        break;
                     case '-':
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!\n");
-                        break;
                     case '*':
                         exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!\n");
-                        break;
                 }
             }
         }

@@ -6,12 +6,12 @@
   use function cli\prompt;
   use function Brain\Games\Engine\playGame;
 
-function startProgressionGame()
+function startProgressionGame(): void
 {
         $rule = 'What number is missing in the progression?';
         $congrats = "Congratulations, %s!";
 
-    $round = function ($name) {
+    $round = function ($name): void {
 
         for ($i = 0; $i <= 2; $i++) {
             $firstNum = mt_rand(1, 20);
