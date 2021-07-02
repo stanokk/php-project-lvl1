@@ -14,7 +14,7 @@ function startPrimeGame(): void
 
     $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
-            $number = mt_rand(1, 100);
+            $number = mt_rand(2, 100);
             line("Question: {$number}");
             $answer = prompt('Your answer');
             $correctAnswer = '';
