@@ -18,7 +18,7 @@ function startPrimeGame(): void
             line("Question: {$number}");
             $answer = prompt('Your answer');
             $correctAnswer = '';
-            for ($j = 2; $j < $number; $j++) {
+            for ($j = 2; $j <= sqrt($number); $j += 2) {
                 if ($number % $j == 0) {
                     $correctAnswer = 'no';
                     break;
