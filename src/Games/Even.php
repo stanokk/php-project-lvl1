@@ -1,15 +1,15 @@
 <?php
 
-  namespace Brain\Games\Even;
+namespace Brain\Games\Even;
 
-  use function cli\line;
-  use function cli\prompt;
-  use function Brain\Games\Engine\playGame;
+use function cli\line;
+use function cli\prompt;
+use function Brain\Games\Engine\playGame;
 
 function startEvenGame(): void
 {
-        $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-        $congrats = "Congratulations, %s!";
+    $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $congrats = "Congratulations, %s!";
 
 
     $round = function ($name): void {

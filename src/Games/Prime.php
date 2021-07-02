@@ -1,15 +1,15 @@
 <?php
 
-  namespace Brain\Games\Prime;
+namespace Brain\Games\Prime;
 
-  use function cli\line;
-  use function cli\prompt;
-  use function Brain\Games\Engine\playGame;
+use function cli\line;
+use function cli\prompt;
+use function Brain\Games\Engine\playGame;
 
 function startPrimeGame(): void
 {
-        $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-        $congrats = "Congratulations, %s!";
+    $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $congrats = "Congratulations, %s!";
 
 
     $round = function ($name): void {

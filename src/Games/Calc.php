@@ -1,34 +1,34 @@
 <?php
 
-  namespace Brain\Games\Calc;
+namespace Brain\Games\Calc;
 
-  use function cli\line;
-  use function cli\prompt;
-  use function Brain\Games\Engine\playGame;
+use function cli\line;
+use function cli\prompt;
+use function Brain\Games\Engine\playGame;
 
 function startCalcGame(): void
 {
-        $rule = 'What is the result of the expression?';
-        $congrats = "Congratulations, %s!";
+    $rule = 'What is the result of the expression?';
+    $congrats = "Congratulations, %s!";
 
     $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
             $correctAnswer = 0;
-            $number_1 = mt_rand(1, 20);
-            $number_2 = mt_rand(1, 20);
+            $num1 = mt_rand(1, 20);
+            $num2 = mt_rand(1, 20);
             $operator = ['+', '-', '*'];
             $randomOperator = $operator[array_rand($operator)];
-            line("Question: {$number_1} {$randomOperator} {$number_2}");
+            line("Question: {$num1} {$randomOperator} {$num2}");
             $answer =  prompt('Your answer');
             switch ($randomOperator) {
                 case '+':
-                    $correctAnswer = $number_1 + $number_2;
+                    $correctAnswer = $num1 + $num2;
                     break;
                 case '-':
-                    $correctAnswer = $number_1 - $number_2;
+                    $correctAnswer = $num1 - $num2;
                     break;
                 case '*':
-                    $correctAnswer = $number_1 * $number_2;
+                    $correctAnswer = $num1 * $num2;
                     break;
             }
             if ($answer === (string) $correctAnswer) {

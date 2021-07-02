@@ -1,9 +1,9 @@
 <?php
 
-  namespace Brain\Games\Cli;
+namespace Brain\Games\Cli;
 
-  use function cli\line;
-  use function cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 function greeting(): void
 {

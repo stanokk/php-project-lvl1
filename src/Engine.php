@@ -1,9 +1,9 @@
 <?php
 
-  namespace Brain\Games\Engine;
+namespace Brain\Games\Engine;
 
-  use function cli\line;
-  use function cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 function playGame(string $rule, callable $round, string $congrats): void
 {

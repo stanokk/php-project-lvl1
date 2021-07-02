@@ -1,10 +1,10 @@
 <?php
 
-  namespace Brain\Games\Gcd;
+namespace Brain\Games\Gcd;
 
-  use function cli\line;
-  use function cli\prompt;
-  use function Brain\Games\Engine\playGame;
+use function cli\line;
+use function cli\prompt;
+use function Brain\Games\Engine\playGame;
 
 function getGcd(int $num1, int $num2): int
 {
@@ -21,8 +21,8 @@ function getGcd(int $num1, int $num2): int
 
 function startGcdGame(): void
 {
-        $rule = 'Find the greatest common divisor of given numbers';
-        $congrats = "Congratulations, %s!";
+    $rule = 'Find the greatest common divisor of given numbers';
+    $congrats = "Congratulations, %s!";
 
     $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {

@@ -1,15 +1,15 @@
 <?php
 
-  namespace Brain\Games\Progression;
+namespace Brain\Games\Progression;
 
-  use function cli\line;
-  use function cli\prompt;
-  use function Brain\Games\Engine\playGame;
+use function cli\line;
+use function cli\prompt;
+use function Brain\Games\Engine\playGame;
 
 function startProgressionGame(): void
 {
-        $rule = 'What number is missing in the progression?';
-        $congrats = "Congratulations, %s!";
+    $rule = 'What number is missing in the progression?';
+    $congrats = "Congratulations, %s!";
 
     $round = function ($name): void {
 
