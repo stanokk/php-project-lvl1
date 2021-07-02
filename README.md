@@ -5,14 +5,14 @@
 
 ![workflow](https://github.com/stanokk/php-project-lvl1/actions/workflows/workflow.yml/badge.svg)
 
-https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964
+[![asciicast](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964.svg)](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964)
 
-https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L
+[![asciicast](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L.svg)](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L)
 
-https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD
+[![asciicast](https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD.svg)](https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD)
 
-https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin
+[![asciicast](https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin.svg)](https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin)
 
-https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE
+[![asciicast](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE.svg)](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE)
 
-https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782
+[![asciicast](https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782.svg)](https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782)
