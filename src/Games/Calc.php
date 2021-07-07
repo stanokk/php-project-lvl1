@@ -6,47 +6,59 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
+function calcResult($someOperator, $firstNum, $secondNum): int
+{
+    switch ($someOperator) {
+        case '+':
+            $result = $firstNum + $secondNum;
+            break;
+        case '-':
+            $result = $firstNum - $secondNum;
+            break;
+        case '*':
+            $result = $firstNum * $secondNum;
+            break;
+    }
+    return $result;
+}
+
 function startCalcGame(): void
 {
     $rule = 'What is the result of the expression?';
-    $congrats = "Congratulations, %s!";
 
     $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
-            $correctAnswer = 0;
             $num1 = mt_rand(1, 20);
             $num2 = mt_rand(1, 20);
             $operator = ['+', '-', '*'];
             $randomOperator = $operator[array_rand($operator)];
             line("Question: {$num1} {$randomOperator} {$num2}");
             $answer =  prompt('Your answer');
-            switch ($randomOperator) {
-                case '+':
-                    $correctAnswer = $num1 + $num2;
-                    break;
-                case '-':
-                    $correctAnswer = $num1 - $num2;
-                    break;
-                case '*':
-                    $correctAnswer = $num1 * $num2;
-                    break;
-            }
+            $correctAnswer = calcResult($randomOperator, $num1, $num2);
             if ($answer === (string) $correctAnswer) {
                 line('Correct!');
-            } elseif ($answer !== (string) $correctAnswer) {
+            }
+            if ($answer !== (string) $correctAnswer) {
                 switch ($randomOperator) {
                     case '+':
-                        exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!\n");
+                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!i");
+                        break;
                     case '-':
-                        exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!\n");
+                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!");
+                        break;
                     case '*':
-                        exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!\n");
+                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!");
+                        break;
                 }
+                break;
             }
         }
+        if ($answer === (string) $correctAnswer) {
+            line("Congratulations, %s!", $name);
+        }
     };
-    playGame($rule, $round, $congrats);
+    playGame($rule, $round);
 }
