@@ -36,7 +36,7 @@ Let's try again, {$name}!\n");
             }
         }
         if ($answer === (string) $hiddenValue) {
-            line("Congratulations %s!", $name);
+            line("Congratulations, %s!", $name);
         }
     };
     playGame($rule, $round);

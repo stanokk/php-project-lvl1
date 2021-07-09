@@ -40,7 +40,7 @@ Let's try again, {$name}!\n");
             }
         }
         if ($answer === (string) $correctAnswer) {
-            line("Congratulations %s!", $name);
+            line("Congratulations, %s!", $name);
         }
     };
     playGame($rule, $round);

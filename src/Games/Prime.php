@@ -40,7 +40,7 @@ function startPrimeGame(): void
             }
         }
         if ($answer === $correctAnswer) {
-            line("Congratulations %s!", $name);
+            line("Congratulations, %s!", $name);
         }
     };
     playGame($rule, $round);
