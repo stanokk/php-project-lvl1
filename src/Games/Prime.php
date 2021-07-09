@@ -38,9 +38,9 @@ function startPrimeGame(): void
             } elseif ($answer === $correctAnswer) {
                 line('Correct!');
             }
-        }
-        if ($answer === $correctAnswer) {
-            line("Congratulations, %s!", $name);
+            if ($i === 2) {
+                line("Congratulations, %s!", $name);
+            }
         }
     };
     playGame($rule, $round);

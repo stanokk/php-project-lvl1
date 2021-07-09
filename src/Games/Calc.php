@@ -6,8 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function calcResult($someOperator, $firstNum, $secondNum): int
+function calcResult(string $someOperator, int $firstNum, int $secondNum): int
 {
+    $result = 0;
     switch ($someOperator) {
         case '+':
             $result = $firstNum + $secondNum;
@@ -55,9 +56,9 @@ Let's try again, {$name}!");
                 }
                 break;
             }
-        }
-        if ($answer === (string) $correctAnswer) {
-            line("Congratulations, %s!", $name);
+            if ($i === 2) {
+                line("Congratulations, %s!", $name);
+            }
         }
     };
     playGame($rule, $round);

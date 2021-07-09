@@ -34,9 +34,9 @@ function startProgressionGame(): void
 Let's try again, {$name}!\n");
                 break;
             }
-        }
-        if ($answer === (string) $hiddenValue) {
-            line("Congratulations, %s!", $name);
+            if ($i === 2) {
+                line("Congratulations, %s!", $name);
+            }
         }
     };
     playGame($rule, $round);

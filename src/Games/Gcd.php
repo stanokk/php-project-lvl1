@@ -38,9 +38,9 @@ function startGcdGame(): void
 Let's try again, {$name}!\n");
                 break;
             }
-        }
-        if ($answer === (string) $correctAnswer) {
-            line("Congratulations, %s!", $name);
+            if ($i === 2) {
+                line("Congratulations, %s!", $name);
+            }
         }
     };
     playGame($rule, $round);
