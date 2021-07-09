@@ -9,7 +9,6 @@ use function Brain\Games\Engine\playGame;
 function startPrimeGame(): void
 {
     $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $congrats = "Congratulations, %s!";
 
 
     $round = function ($name): void {
@@ -29,14 +28,20 @@ function startPrimeGame(): void
             if ($answer !== $correctAnswer) {
                 switch ($answer) {
                     case 'yes':
-                        exit("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}!\n");
+                        line("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}!\n");
+                        break;
                     case 'no':
-                        exit("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}!\n");
+                        line("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}!\n");
+                        break;
                 }
+                break;
             } elseif ($answer === $correctAnswer) {
                 line('Correct!');
             }
         }
+        if ($answer === $correctAnswer) {
+            line("Congratulations %s!", $name);
+        }
     };
-    playGame($rule, $round, $congrats);
+    playGame($rule, $round);
 }

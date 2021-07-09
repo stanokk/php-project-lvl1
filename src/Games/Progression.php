@@ -9,7 +9,6 @@ use function Brain\Games\Engine\playGame;
 function startProgressionGame(): void
 {
     $rule = 'What number is missing in the progression?';
-    $congrats = "Congratulations, %s!";
 
     $round = function ($name): void {
 
@@ -31,10 +30,14 @@ function startProgressionGame(): void
             if ($answer === (string) $hiddenValue) {
                 line('Correct!');
             } else {
-                        exit("'{$answer}' is wrong answer ;(. Correct answer was '{$hiddenValue}'.
+                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$hiddenValue}'.
 Let's try again, {$name}!\n");
+                break;
             }
         }
+        if ($answer === (string) $hiddenValue) {
+            line("Congratulations %s!", $name);
+        }
     };
-    playGame($rule, $round, $congrats);
+    playGame($rule, $round);
 }

@@ -22,7 +22,6 @@ function getGcd(int $num1, int $num2): int
 function startGcdGame(): void
 {
     $rule = 'Find the greatest common divisor of given numbers';
-    $congrats = "Congratulations, %s!";
 
     $round = function ($name): void {
         for ($i = 0; $i <= 2; $i++) {
@@ -35,10 +34,14 @@ function startGcdGame(): void
             if ($answer === (string) $correctAnswer) {
                 line('Correct!');
             } else {
-                exit("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+                line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!\n");
+                break;
             }
         }
+        if ($answer === (string) $correctAnswer) {
+            line("Congratulations %s!", $name);
+        }
     };
-    playGame($rule, $round, $congrats);
+    playGame($rule, $round);
 }

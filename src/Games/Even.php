@@ -6,10 +6,19 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
+function isEven(int $num)
+{
+    if ($num % 2 === 0) {
+        $result = 'yes';
+    } elseif ($num % 2 !== 0) {
+        $result = 'no';
+    }
+    return $result;
+}
+
 function startEvenGame(): void
 {
     $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $congrats = "Congratulations, %s!";
 
 
     $round = function ($name): void {
@@ -19,24 +28,27 @@ function startEvenGame(): void
             $answer = prompt('Your answer');
             $correctAnswer = '';
 
-            if ($number % 2 === 0) {
-                $correctAnswer = 'yes';
-            } elseif ($number % 2 !== 0) {
-                $correctAnswer = 'no';
-            }
+            $correctAnswer = isEven($number);
             if ($answer !== $correctAnswer) {
                 switch ($answer) {
                     case 'yes':
-                        exit("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}!\n");
+                        line("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}!\n");
+                        break;
                     case 'no':
-                        exit("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}!\n");
+                        line("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}!\n");
+                        break;
                     default:
-                        exit("Let's try again, {$name}!\n");
+                        line("Let's try again, {$name}!\n");
+                        break;
                 }
+                break;
             } elseif ($answer === $correctAnswer) {
                 line('Correct!');
             }
         }
+        if ($answer === $correctAnswer) {
+            line("Congratulations, %s!", $name);
+        }
     };
-    playGame($rule, $round, $congrats);
+    playGame($rule, $round);
 }
