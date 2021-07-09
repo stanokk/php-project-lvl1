@@ -6,8 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function isEven(int $num)
+function isEven(int $num): string
 {
+    $result = '';
     if ($num % 2 === 0) {
         $result = 'yes';
     } elseif ($num % 2 !== 0) {
@@ -45,9 +46,9 @@ function startEvenGame(): void
             } elseif ($answer === $correctAnswer) {
                 line('Correct!');
             }
-        }
-        if ($answer === $correctAnswer) {
-            line("Congratulations, %s!", $name);
+            if ($i === 2) {
+                line("Congratulations, %s!", $name);
+            }
         }
     };
     playGame($rule, $round);
