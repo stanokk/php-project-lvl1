@@ -40,21 +40,9 @@ function startCalcGame(): void
                 line('Correct!');
             }
             if ($answer !== (string) $correctAnswer) {
-                switch ($randomOperator) {
-                    case '+':
-                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!i");
-                        break;
-                    case '-':
                         line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!");
                         break;
-                    case '*':
-                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!");
-                        break;
-                }
-                break;
             }
             if ($i === 2) {
                 line("Congratulations, %s!", $name);

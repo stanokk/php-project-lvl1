@@ -26,14 +26,8 @@ function startPrimeGame(): void
                 }
             }
             if ($answer !== $correctAnswer) {
-                switch ($answer) {
-                    case 'yes':
-                        line("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {$name}!\n");
-                        break;
-                    case 'no':
-                        line("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, {$name}!\n");
-                        break;
-                }
+                line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!");
                 break;
             } elseif ($answer === $correctAnswer) {
                 line('Correct!');
