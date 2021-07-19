@@ -36,12 +36,16 @@ function getRule(): string
 
 function startCalcGame(): void
 {
-    $num1 = mt_rand(1, 20);
-    $num2 = mt_rand(1, 20);
-    $operator = ['+', '-', '*'];
-    $randomOperator = $operator[array_rand($operator)];
     $rule = getRule();
-    $question = setQuestion($num1, $num2, $randomOperator);
-    (string) $correctAnswer = calcResult($randomOperator, $num1, $num2);
-    playGame($rule, $question, $correctAnswer);
+    $array = [];
+    for ($i = 0; $i <= 2; $i++) {
+        $num1 = mt_rand(1, 20);
+        $num2 = mt_rand(1, 20);
+        $operator = ['+', '-', '*'];
+        $randomOperator = $operator[array_rand($operator)];
+        $question = setQuestion($num1, $num2, $randomOperator);
+        (string) $correctAnswer = calcResult($randomOperator, $num1, $num2);
+        $array[$question] = $correctAnswer;
+    }
+    playGame($rule, $question, $correctAnswer, $array);
 }
