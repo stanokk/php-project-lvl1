@@ -37,8 +37,8 @@ function getRule(): string
 function startCalcGame(): void
 {
     $rule = getRule();
-    $array = [];
-    for ($i = 0; $i <= 2; $i++) {
+    $round = function () {
+        $array = [];
         $num1 = mt_rand(1, 20);
         $num2 = mt_rand(1, 20);
         $operator = ['+', '-', '*'];
@@ -46,6 +46,7 @@ function startCalcGame(): void
         $question = setQuestion($num1, $num2, $randomOperator);
         (string) $correctAnswer = calcResult($randomOperator, $num1, $num2);
         $array[$question] = $correctAnswer;
-    }
-    playGame($rule, $question, $correctAnswer, $array);
+        return $array;
+    };
+    playGame($rule, $round);
 }
