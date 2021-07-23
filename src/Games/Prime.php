@@ -8,9 +8,8 @@ use function Brain\Games\Engine\playGame;
 
 function isPrime(int $number): string
 {
-    $correctAnswer = '';
     for ($j = 2; $j <= sqrt($number); $j++) {
-        if ($number % $j === 0) {
+        if ($number % $j == 0) {
             $correctAnswer = 'no';
             break;
         } else {
