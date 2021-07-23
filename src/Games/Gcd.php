@@ -19,29 +19,27 @@ function getGcd(int $num1, int $num2): int
     }
 }
 
+function setQuestion(int $number1, int $number2): string
+{
+    return "Question: {$number1} {$number2}";
+}
+
+function getRule(): string
+{
+    return 'Find the greatest common divisor of given numbers';
+}
+
 function startGcdGame(): void
 {
-    $rule = 'Find the greatest common divisor of given numbers';
-
-    $round = function ($name): void {
-        for ($i = 0; $i <= 2; $i++) {
-            $number_1 = mt_rand(1, 20);
-            $number_2 = mt_rand(1, 20);
-            line("Question: {$number_1} {$number_2}");
-            $answer =  prompt('Your answer');
-            $correctAnswer = getGcd($number_1, $number_2);
-
-            if ($answer === (string) $correctAnswer) {
-                line('Correct!');
-            } else {
-                line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!\n");
-                break;
-            }
-            if ($i === 2) {
-                line("Congratulations, %s!", $name);
-            }
-        }
+    $rule = getRule();
+    $round = function (): array {
+            $array = [];
+            $number1 = mt_rand(1, 20);
+            $number2 = mt_rand(1, 20);
+            $question = setQuestion($number1, $number2);
+            $correctAnswer = getGcd($number1, $number2);
+            $array[$question] = $correctAnswer;
+            return $array;
     };
     playGame($rule, $round);
 }

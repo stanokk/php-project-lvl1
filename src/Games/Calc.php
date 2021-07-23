@@ -37,7 +37,7 @@ function getRule(): string
 function startCalcGame(): void
 {
     $rule = getRule();
-    $round = function () {
+    $round = function (): array {
         $array = [];
         $num1 = mt_rand(1, 20);
         $num2 = mt_rand(1, 20);

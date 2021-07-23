@@ -21,7 +21,7 @@ function playGame(string $rule, callable $round): void
         }
         if ($answer !== (string) $correctAnswer) {
                         line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Liet's try again, {$name}!");
+Let's try again, {$name}!");
                         break;
         }
     }

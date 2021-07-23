@@ -17,30 +17,26 @@ function isEven(int $num): string
     return $result;
 }
 
+function setQuestion(int $number): string
+{
+    return "Question: {$number}";
+}
+
+function getRule(): string
+{
+    return 'Answer "yes" if the number is even, otherwise answer "no".';
+}
+
 function startEvenGame(): void
 {
-    $rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-
-    $round = function ($name): void {
-        for ($i = 0; $i <= 2; $i++) {
+    $rule = getRule();
+    $round = function (): array {
+            $array = [];
             $number = mt_rand(1, 100);
-            line("Question: {$number}");
-            $answer = prompt('Your answer');
-            $correctAnswer = '';
-
+            $question = setQuestion($number);
             $correctAnswer = isEven($number);
-            if ($answer !== $correctAnswer) {
-                line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-Let's try again, {$name}!\n");
-                break;
-            } elseif ($answer === $correctAnswer) {
-                line('Correct!');
-            }
-            if ($i === 2) {
-                line("Congratulations, %s!", $name);
-            }
-        }
+            $array[$question] = $correctAnswer;
+            return $array;
     };
     playGame($rule, $round);
 }
