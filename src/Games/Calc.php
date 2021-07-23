@@ -44,8 +44,8 @@ function startCalcGame(): void
         $operator = ['+', '-', '*'];
         $randomOperator = $operator[array_rand($operator)];
         $question = setQuestion($num1, $num2, $randomOperator);
-        (string) $correctAnswer = calcResult($randomOperator, $num1, $num2);
-        $array[$question] = $correctAnswer;
+        $correctAnswer = calcResult($randomOperator, $num1, $num2);
+        $array[$question] = (string) $correctAnswer;
         return $array;
     };
     playGame($rule, $round);

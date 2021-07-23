@@ -12,10 +12,11 @@ function playGame(string $rule, callable $round): void
     line("Hello, %s!", $name);
     line($rule);
     for ($i = 1; $i <= 3; $i++) {
-        foreach ($round() as $question => $correctAnswer) {
+            $result = $round();
+            $question = array_key_first($result);
+            $correctAnswer = $result[$question];
             line($question);
             $answer = prompt('Your answer');
-        }
         if ($answer === (string) $correctAnswer) {
                 line('Correct!');
         }
