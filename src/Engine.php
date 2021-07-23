@@ -25,8 +25,8 @@ function playGame(string $rule, callable $round): void
 Let's try again, {$name}!");
                         break;
         }
-    }
-    if ($answer === (string) $correctAnswer) {
-        line("Congratulations, %s!", $name);
+        if ($i === 3) {
+            line("Congratulations, %s!", $name);
+        }
     }
 }
