@@ -14,11 +14,11 @@ function playGame(string $rule, callable $round): void
     for ($i = 1; $i <= 3; $i++) {
         foreach ($round() as $question => $correctAnswer) {
             line($question);
-            $answer = prompt('Your answer');
+	    $answer = prompt('Your answer');
+	}
             if ($answer === (string) $correctAnswer) {
                 line('Correct!');
             }
-        }
         if ($answer !== (string) $correctAnswer) {
                         line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!");
