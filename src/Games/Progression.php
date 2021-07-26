@@ -40,7 +40,7 @@ function startProgressionGame(): void
             $firstNum = mt_rand(1, 20);
             $progressionStep = mt_rand(1, 10);
             $progression = getProgression($firstNum, $progressionStep);
-            $hiddenIndex = array_rand($progression);
+            (int) $hiddenIndex = array_rand($progression);
             $correctAnswer = $progression[$hiddenIndex];
             $progressionAsString = getCondition($progression, $hiddenIndex);
             $question = setQuestion($progressionAsString);

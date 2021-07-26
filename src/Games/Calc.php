@@ -19,8 +19,8 @@ function calcResult(string $someOperator, int $firstNum, int $secondNum): int
         case '*':
             $result = $firstNum * $secondNum;
             break;
-        default:
-            throw new Exception("Some error happened");
+       // default:
+         //   throw new Exception("Some error happened");
     }
     return $result;
 }
