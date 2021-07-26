@@ -23,7 +23,7 @@ function getProgression(int $num, int $step): array
 
 function getCondition(array $sequence, int $index): string
 {
-    $sequence[(int) $index] = '..';
+    $sequence[$index] = '..';
     $sequenceAsString = implode(' ', $sequence);
     return $sequenceAsString;
 }
@@ -42,7 +42,7 @@ function startProgressionGame(): void
             $progression = getProgression($firstNum, $progressionStep);
             $hiddenIndex = array_rand($progression);
             $correctAnswer = $progression[$hiddenIndex];
-            $progressionAsString = getCondition($progression, $hiddenIndex);
+            $progressionAsString = getCondition($progression, (int) $hiddenIndex);
             $question = setQuestion($progressionAsString);
             $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
             return $array;
