@@ -6,6 +6,7 @@
 ![workflow](https://github.com/stanokk/php-project-lvl1/actions/workflows/workflow.yml/badge.svg)
 
 [![asciicast](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964.svg)](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964)
+  $ make install
 
 [![asciicast](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L.svg)](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L)
 
