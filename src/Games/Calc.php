@@ -2,10 +2,6 @@
 
 namespace Brain\Games\Calc;
 
-class Exception extends \Exception
-{
-}
-
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
@@ -24,7 +20,7 @@ function calcResult(string $someOperator, int $firstNum, int $secondNum): int
             $result = $firstNum * $secondNum;
             break;
         default:
-            throw new Exception("Some error happened");
+            throw new \Exception("Some error happened");
     }
     return $result;
 }
