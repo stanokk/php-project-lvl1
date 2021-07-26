@@ -12,16 +12,16 @@ function playGame(string $rule, callable $round): void
     line("Hello, %s!", $name);
     line($rule);
     for ($i = 1; $i <= 3; $i++) {
-            $result = $round();
-            $question = array_key_first($result);
-            $correctAnswer = $result[$question];
+            $gameRound = $round();
+            $question = $gameRound['question'];
+            $correctAnswer = (string) $gameRound['correctAnswer'];
             line($question);
             $answer = prompt('Your answer');
-        if ($answer === (string) $correctAnswer) {
-                line('Correct!');
+        if ($answer === $correctAnswer) {
+            line('Correct!');
         }
-        if ($answer !== (string) $correctAnswer) {
-                        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+        if ($answer !== $correctAnswer) {
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
 Let's try again, {$name}!");
                         break;
         }
