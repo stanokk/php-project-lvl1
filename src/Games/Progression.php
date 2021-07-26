@@ -30,7 +30,6 @@ function startProgressionGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-            $array = [];
             $firstNum = mt_rand(1, 20);
             $progressionStep = mt_rand(1, 10);
             $progression = getProgression($firstNum, $progressionStep);
@@ -39,7 +38,7 @@ function startProgressionGame(): void
             $progression[$hiddenIndex] = '..';
             $progressionAsString = implode(' ', $progression);
             $question = setQuestion($progressionAsString);
-            $array[$question] = $correctAnswer;
+            $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
             return $array;
     };
     playGame($rule, $round);

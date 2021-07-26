@@ -6,15 +6,14 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function isEven(int $num): string
+function isEven(int $num, string $str1, string $str2): string
 {
     $result = '';
     if ($num % 2 === 0) {
-        $result = 'yes';
-    } elseif ($num % 2 !== 0) {
-        $result = 'no';
+        return $str1;
+    } else {
+        return $str2;
     }
-    return $result;
 }
 
 function setQuestion(int $number): string
@@ -31,11 +30,12 @@ function startEvenGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-            $array = [];
             $number = mt_rand(1, 100);
+            $positiveResponse = 'yes';
+            $negativeResponse = 'no';
             $question = setQuestion($number);
-            $correctAnswer = isEven($number);
-            $array[$question] = $correctAnswer;
+            $correctAnswer = isEven($number, $positiveResponse, $negativeResponse);
+            $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
             return $array;
     };
     playGame($rule, $round);

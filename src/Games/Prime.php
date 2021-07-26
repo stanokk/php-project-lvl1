@@ -6,14 +6,14 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function isPrime(int $number): string
+function isPrime(int $number, string $str1, string $str2): string
 {
     for ($j = 2; $j <= sqrt($number); $j++) {
         if ($number % $j == 0) {
-            return 'no';
+            return $str2;
         }
     }
-    return 'yes';
+    return $str1;
 }
 
 function getRule(): string
@@ -30,11 +30,12 @@ function startPrimeGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-            $array = [];
             $number = mt_rand(2, 100);
+            $positiveResponse = 'yes';
+            $negativeResponse = 'no';
             $question = setQuestion($number);
-            $correctAnswer = isPrime($number);
-            $array[$question] = $correctAnswer;
+            $correctAnswer = isPrime($number, $positiveResponse, $negativeResponse);
+            $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
             return $array;
     };
     playGame($rule, $round);

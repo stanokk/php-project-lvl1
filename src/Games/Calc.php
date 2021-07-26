@@ -38,14 +38,13 @@ function startCalcGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-        $array = [];
         $num1 = mt_rand(1, 20);
         $num2 = mt_rand(1, 20);
         $operator = ['+', '-', '*'];
         $randomOperator = $operator[array_rand($operator)];
         $question = setQuestion($num1, $num2, $randomOperator);
         $correctAnswer = calcResult($randomOperator, $num1, $num2);
-        $array[$question] = (string) $correctAnswer;
+        $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
         return $array;
     };
     playGame($rule, $round);
