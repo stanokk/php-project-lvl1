@@ -1,7 +1,10 @@
 <?php
 
 namespace Brain\Games\Calc;
-class Exception extends \Exception {}
+
+class Exception extends \Exception
+{
+}
 
 use function cli\line;
 use function cli\prompt;
