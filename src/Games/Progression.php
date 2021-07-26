@@ -21,9 +21,9 @@ function getProgression(int $num, int $step): array
     return $arr;
 }
 
-function getCondition(array $sequence, string $index): string
+function getCondition(array $sequence, int $index): string
 {
-    $sequence[$index] = '..';
+    $sequence[(int) $index] = '..';
     $sequenceAsString = implode(' ', $sequence);
     return $sequenceAsString;
 }
