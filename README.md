@@ -12,8 +12,11 @@
 [![asciicast](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L.svg)](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L)
   $ make brain-even
 
+  
 [![asciicast](https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD.svg)](https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD)
+  $ make brain-calc
 
+  
 [![asciicast](https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin.svg)](https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin)
 
 [![asciicast](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE.svg)](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE)
