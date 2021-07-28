@@ -22,8 +22,8 @@
 
   
 [![asciicast](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE.svg)](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE)
-  `$make brain-progression`
+  `$ make brain-progression`
 
   
 [![asciicast](https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782.svg)](https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782)
-  `$make brain-prime`
+  `$ make brain-prime`
