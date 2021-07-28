@@ -6,24 +6,24 @@
 ![workflow](https://github.com/stanokk/php-project-lvl1/actions/workflows/workflow.yml/badge.svg)
 
 [![asciicast](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964.svg)](https://asciinema.org/a/XN4U4iUiE7LmD7tFLBhHJ0964)
-  $ make install
+  `$ make install`
 
   
 [![asciicast](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L.svg)](https://asciinema.org/a/aOI3RjKwjbzo2WwNT3xxAhQ2L)
-  $ make brain-even
+  `$ make brain-even`
 
   
 [![asciicast](https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD.svg)](https://asciinema.org/a/oQ7lpWQN9RUcPv6OvULiXoCHD)
-  $ make brain-calc
+  `$ make brain-calc`
 
   
 [![asciicast](https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin.svg)](https://asciinema.org/a/nenCMxwdAX8KQHemCj0IuSpin)
-  $ make brain-gcd
+  `$ make brain-gcd`
 
   
 [![asciicast](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE.svg)](https://asciinema.org/a/cGlrrwBEuZzbHWiEIDinH5YcE)
-  $make brain-progression
+  `$make brain-progression`
 
   
 [![asciicast](https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782.svg)](https://asciinema.org/a/yq2IFVQ3bNjfhFUF6Lphiw782)
-  $make brain-prime
+  `$make brain-prime`
