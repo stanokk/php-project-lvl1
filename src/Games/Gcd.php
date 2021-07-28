@@ -33,12 +33,12 @@ function startGcdGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-            $number1 = mt_rand(1, 20);
-            $number2 = mt_rand(1, 20);
-            $question = setQuestion($number1, $number2);
-            $correctAnswer = getGcd($number1, $number2);
-            $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
-            return $array;
+        $number1 = mt_rand(1, 20);
+        $number2 = mt_rand(1, 20);
+        $question = setQuestion($number1, $number2);
+        $correctAnswer = getGcd($number1, $number2);
+        $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
+        return $array;
     };
     playGame($rule, $round);
 }

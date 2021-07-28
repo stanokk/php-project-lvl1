@@ -8,21 +8,16 @@ use function Brain\Games\Engine\playGame;
 
 function calcResult(string $someOperator, int $firstNum, int $secondNum): int
 {
-    $result = 0;
     switch ($someOperator) {
         case '+':
-            $result = $firstNum + $secondNum;
-            break;
+            return $firstNum + $secondNum;
         case '-':
-            $result = $firstNum - $secondNum;
-            break;
+            return $firstNum - $secondNum;
         case '*':
-            $result = $firstNum * $secondNum;
-            break;
+            return $firstNum * $secondNum;
         default:
-            throw new \Exception("Some error happened");
+            throw new \Exception("Oops! Invalid operator");
     }
-    return $result;
 }
 
 function setQuestion(int $number1, int $number2, string $character): string

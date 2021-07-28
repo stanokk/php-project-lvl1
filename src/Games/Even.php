@@ -8,7 +8,6 @@ use function Brain\Games\Engine\playGame;
 
 function isEven(int $num, string $str1, string $str2): string
 {
-    $result = '';
     if ($num % 2 === 0) {
         return $str1;
     } else {
@@ -30,13 +29,13 @@ function startEvenGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-            $number = mt_rand(1, 100);
-            $positiveResponse = 'yes';
-            $negativeResponse = 'no';
-            $question = setQuestion($number);
-            $correctAnswer = isEven($number, $positiveResponse, $negativeResponse);
-            $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
-            return $array;
+        $number = mt_rand(1, 100);
+        $positiveResponse = 'yes';
+        $negativeResponse = 'no';
+        $question = setQuestion($number);
+        $correctAnswer = isEven($number, $positiveResponse, $negativeResponse);
+        $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
+        return $array;
     };
     playGame($rule, $round);
 }

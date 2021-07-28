@@ -30,13 +30,13 @@ function startPrimeGame(): void
 {
     $rule = getRule();
     $round = function (): array {
-            $number = mt_rand(2, 100);
-            $positiveResponse = 'yes';
-            $negativeResponse = 'no';
-            $question = setQuestion($number);
-            $correctAnswer = isPrime($number, $positiveResponse, $negativeResponse);
-            $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
-            return $array;
+        $number = mt_rand(2, 100);
+        $positiveResponse = 'yes';
+        $negativeResponse = 'no';
+        $question = setQuestion($number);
+        $correctAnswer = isPrime($number, $positiveResponse, $negativeResponse);
+        $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
+        return $array;
     };
     playGame($rule, $round);
 }
