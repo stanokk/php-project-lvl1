@@ -6,12 +6,12 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function isEven(int $num, string $str1, string $str2): string
+function isEven(int $num): string
 {
     if ($num % 2 === 0) {
-        return $str1;
+        return true;
     } else {
-        return $str2;
+        return false;
     }
 }
 
@@ -30,10 +30,8 @@ function startEvenGame(): void
     $rule = getRule();
     $round = function (): array {
         $number = mt_rand(1, 100);
-        $positiveResponse = 'yes';
-        $negativeResponse = 'no';
         $question = setQuestion($number);
-        $correctAnswer = isEven($number, $positiveResponse, $negativeResponse);
+        $correctAnswer = isEven($number) ? 'yes' : 'no';
         $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
         return $array;
     };
