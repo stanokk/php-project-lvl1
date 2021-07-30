@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function isPrime(int $number): string
+function isPrime(int $number): bool
 {
     for ($j = 2; $j <= sqrt($number); $j++) {
         if ($number % $j == 0) {
