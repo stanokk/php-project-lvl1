@@ -16,7 +16,7 @@ function playGame(string $rule, callable $round): void
     for ($i = $firstAttempt; $i <= $thirdAttempt; $i++) {
         $gameRound = $round();
         $question = $gameRound['question'];
-        $correctAnswer = (string) $gameRound['correctAnswer'];
+        $correctAnswer = $gameRound['correctAnswer'];
         line($question);
         $answer = prompt('Your answer');
         if ($answer === $correctAnswer) {

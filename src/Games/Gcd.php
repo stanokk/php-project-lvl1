@@ -37,7 +37,7 @@ function startGcdGame(): void
         $number2 = mt_rand(1, 20);
         $question = setQuestion($number1, $number2);
         $correctAnswer = getGcd($number1, $number2);
-        $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
+        $array = ['question' => $question, 'correctAnswer' => (string) $correctAnswer];
         return $array;
     };
     playGame($rule, $round);

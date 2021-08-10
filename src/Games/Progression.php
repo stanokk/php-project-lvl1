@@ -11,11 +11,11 @@ function getRule(): string
     return 'What number is missing in the progression?';
 }
 
-function getProgression(int $num, int $step): array
+function getProgression(int $num, int $length, int $step): array
 {
     $arr = [];
     $arr[0] = $num;
-    for ($j = 1; $j < 10; $j++) {
+    for ($j = 1; $j < $length; $j++) {
         $arr[$j] = $arr[$j - 1] + $step;
     }
     return $arr;
@@ -38,13 +38,14 @@ function startProgressionGame(): void
     $rule = getRule();
     $round = function (): array {
         $firstNum = mt_rand(1, 20);
+        $progressionLength = 10;
         $progressionStep = mt_rand(1, 10);
-        $progression = getProgression($firstNum, $progressionStep);
+        $progression = getProgression($firstNum, $progressionLength, $progressionStep);
         $hiddenIndex = array_rand($progression);
         $correctAnswer = $progression[$hiddenIndex];
         $progressionAsString = getCondition($progression, (int) $hiddenIndex);
         $question = setQuestion($progressionAsString);
-        $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
+        $array = ['question' => $question, 'correctAnswer' =>  (string) $correctAnswer];
         return $array;
     };
     playGame($rule, $round);

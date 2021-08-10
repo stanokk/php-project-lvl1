@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\playGame;
 
-function isPrime(int $number): bool
+function isNotPrime(int $number): bool
 {
     for ($j = 2; $j <= sqrt($number); $j++) {
         if ($number % $j == 0) {
@@ -32,7 +32,7 @@ function startPrimeGame(): void
     $round = function (): array {
         $number = mt_rand(2, 100);
         $question = setQuestion($number);
-        $correctAnswer = isPrime($number) ? 'no' : 'yes';
+        $correctAnswer = isNotPrime($number) ? 'no' : 'yes';
         $array = ['question' => $question, 'correctAnswer' => $correctAnswer];
         return $array;
     };

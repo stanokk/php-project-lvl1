@@ -41,7 +41,7 @@ function startCalcGame(): void
         $randomOperator = $operator[array_rand($operator)];
         $question = setQuestion($num1, $num2, $randomOperator);
         $correctAnswer = calcResult($randomOperator, $num1, $num2);
-        $array = ['question' => $question, 'correctAnswer' =>  $correctAnswer];
+        $array = ['question' => $question, 'correctAnswer' =>  (string) $correctAnswer];
         return $array;
     };
     playGame($rule, $round);
