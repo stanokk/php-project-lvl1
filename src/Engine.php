@@ -17,7 +17,7 @@ function playGame(string $rule, callable $round): void
         $gameRound = $round();
         $question = $gameRound['question'];
         $correctAnswer = $gameRound['correctAnswer'];
-        line("Question: $question" );
+        line("Question: $question");
         $answer = prompt('Your answer');
         if ($answer === $correctAnswer) {
             line('Correct!');
