@@ -30,7 +30,7 @@ function getCondition(array $sequence, int $index): string
 
 function setQuestion(string $str): string
 {
-    return "Question: {$str}";
+    return $str;
 }
 
 function startProgressionGame(): void

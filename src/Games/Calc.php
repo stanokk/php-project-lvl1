@@ -22,7 +22,7 @@ function calcResult(string $someOperator, int $firstNum, int $secondNum): int
 
 function setQuestion(int $number1, int $number2, string $character): string
 {
-    return "Question: {$number1} {$character} {$number2}";
+    return "{$number1} {$character} {$number2}";
 }
 
 function getRule(): string

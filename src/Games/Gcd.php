@@ -21,7 +21,7 @@ function getGcd(int $num1, int $num2): int
 
 function setQuestion(int $number1, int $number2): string
 {
-    return "Question: {$number1} {$number2}";
+    return "{$number1} {$number2}";
 }
 
 function getRule(): string

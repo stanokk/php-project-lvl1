@@ -23,7 +23,7 @@ function getRule(): string
 
 function setQuestion(int $num): string
 {
-    return "Question: {$num}";
+    return (string) $num;
 }
 
 function startPrimeGame(): void

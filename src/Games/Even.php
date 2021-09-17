@@ -17,7 +17,7 @@ function isEven(int $num): bool
 
 function setQuestion(int $number): string
 {
-    return "Question: {$number}";
+    return (string) $number;
 }
 
 function getRule(): string
